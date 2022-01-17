@@ -7,6 +7,6 @@
   </div>
 
         <% @list.bookmarks.each do |bookmark| %>
-        <p><%= bookmark.movie %></p>
+        <p><%= bookmark.movie.title %></p>
         <p><%= bookmark.comment %></p>
         <% end %>

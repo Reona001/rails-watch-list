@@ -1,5 +1,11 @@
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
 <div class= "create-list-link">
-  <%= link_to 'Create a new list', new_list_path %>
+  <%= link_to 'Create a new list', new_list_path, class: 'button buttonpurple' %>
 </div>
 
 <div class="flex-container">
@@ -9,7 +15,7 @@
       <div class="card-body">
         <h5 class="card-title"><%= list.name %></h5>
         <h5 class="inside"><%= list.bookmarks.count %> Movie(s)</h5>
-        <%= link_to 'See inside list', list_path(list.id) %>
+        <%= link_to 'See inside list', list_path(list.id), class: 'btn btn-primary' %>
       </div>
     </div>
   <% end %>

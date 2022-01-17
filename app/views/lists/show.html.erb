@@ -6,7 +6,15 @@
     </div>
   </div>
 
-        <% @list.bookmarks.each do |bookmark| %>
-        <p><%= bookmark.movie.title %></p>
-        <p><%= bookmark.comment %></p>
-        <% end %>
+
+
+<% @list.bookmarks.each do |bookmark| %>
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=<%= bookmark.movie.poster_url %> alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= bookmark.movie.title %></h5>
+    <P class= "card-title"><%= bookmark.comment %></P>
+     <%# <%= link_to 'Back to top', lists_path %>
+  </div>
+</div>
+<% end %>

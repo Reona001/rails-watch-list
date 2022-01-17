@@ -1,0 +1,10 @@
+<% @movies.each do |movie| %>
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="<%= movie.poster_url %>" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"><%= movie.title %></h5>
+      <p class="card-text"><%= movie.rating %></p>
+      <%= link_to 'See details', lists_path(movie.id) %>
+    </div>
+  </div>
+<% end %>

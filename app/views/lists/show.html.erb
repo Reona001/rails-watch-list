@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @list.name %></h5>
+      <%= link_to 'Add to list',  new_list_bookmark_path(@list) %>
+      <%= link_to 'Back to lists', lists_path %>
+    </div>
+  </div>
+
+        <% @list.bookmarks.each do |bookmark| %>
+        <p><%= bookmark.movie %></p>
+        <p><%= bookmark.comment %></p>
+        <% end %>

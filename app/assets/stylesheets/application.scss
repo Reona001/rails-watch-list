@@ -11,3 +11,35 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.banner {
+  height: 600px;
+  background-image: url("cinema_background.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: right top;
+  padding: 200px 0;
+
+   h1 {
+      margin-left: 36px;
+      font-size: 86px;
+      color: white;
+      text-shadow: 8px 8px 16px rgba(248, 10, 10, 0.945);
+   }
+
+   p {
+     margin-left: 36px;
+     font-size: 26px;
+     line-height: 36px;
+     color: white;
+     text-shadow: 2px 2px 10px slategrey;
+   }
+
+}
+
+.container {
+  margin-top: 126px;
+  margin-left: 0px;
+  background: rgba(68, 67, 67, 0.7);
+  padding: 20px;
+}

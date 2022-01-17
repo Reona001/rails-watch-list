@@ -1,7 +1,7 @@
 <div class="card" style="width: 18rem;">
     <div class="card-body">
       <h5 class="card-title"><%= @list.name %></h5>
-      <%= link_to 'Add to list',  new_list_bookmark_path(@list) %>
+      <%= link_to 'Add to list',  new_list_bookmark_path(@list) %> |
       <%= link_to 'Back to lists', lists_path %>
     </div>
   </div>
@@ -14,7 +14,7 @@
   <div class="card-body">
     <h5 class="card-title"><%= bookmark.movie.title %></h5>
     <P class= "card-title"><%= bookmark.comment %></P>
-     <%# <%= link_to 'Back to top', lists_path %>
+    <%= link_to 'Details', movie_path(bookmark.movie.id) %>
   </div>
 </div>
 <% end %>

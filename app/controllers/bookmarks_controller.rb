@@ -1,10 +1,4 @@
 class BookmarksController < ApplicationController
-    # def index
-    # @movie = Movie.find(params[:id]
-
-  # def show
-  #   @bookmarks = Bookmark.all
-  # end
 
   def new
     @movies = Movie.all
@@ -23,17 +17,12 @@ class BookmarksController < ApplicationController
     end
   end
 
-
   def destroy
     # @list = List.find(params[:list_id])
     @bookmark = Bookmark.find(params[:id])
     @bookmark.destroy
     redirect_to list_path(@bookmark.list)
   end
-
-
-# {"authenticity_token"=>"[FILTERED]", "bookmark"=>{"movie_id"=>"2", "comment"=>"nice"}, "commit"=>"Create Bookmark", "list_id"=>"3"}
-
 
   private
 

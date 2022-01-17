@@ -15,7 +15,8 @@
       <div class="card-body">
         <h5 class="card-title"><%= bookmark.movie.title %></h5>
         <P class= "card-title"><%= bookmark.comment %></P>
-        <%= link_to 'Details', movie_path(bookmark.movie.id) %>
+        <%= link_to 'Details', movie_path(bookmark.movie.id) %> |
+        <%= link_to 'Remove', bookmark_path(bookmark), method: :delete %>
       </div>
     </div>
   <% end %>

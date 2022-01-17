@@ -23,6 +23,15 @@ class BookmarksController < ApplicationController
     end
   end
 
+
+  def destroy
+    # @list = List.find(params[:list_id])
+    @bookmark = Bookmark.find(params[:id])
+    @bookmark.destroy
+    redirect_to list_path(@bookmark.list)
+  end
+
+
 # {"authenticity_token"=>"[FILTERED]", "bookmark"=>{"movie_id"=>"2", "comment"=>"nice"}, "commit"=>"Create Bookmark", "list_id"=>"3"}
 
 

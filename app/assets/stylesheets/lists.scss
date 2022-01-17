@@ -4,8 +4,12 @@
 .flex-container {
   display: flex;
   background-color: gray;
+  columns: 200px 4;
 }
 
+.card {
+  columns: 200px 3;
+}
 
 // .flex-container > div {
 //   background-color: #f1f1f1;

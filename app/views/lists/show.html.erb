@@ -1,6 +1,7 @@
 <div class="card" style="width: 18rem;">
     <div class="card-body">
-      <h5 class="card-title"><%= @list.name %></h5>
+      <h1 class="card-title"><%= @list.name %></h1>
+      <h3 class="bookmark-count"><%= @list.bookmarks.count %> movie(s) in this list</h3>
       <%= link_to 'Add to list',  new_list_bookmark_path(@list) %> |
       <%= link_to 'Back to lists', lists_path %>
     </div>

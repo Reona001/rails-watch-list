@@ -2,6 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.4'
+#cloudinary gem
+gem 'cloudinary', '~> 1.16.0'
 # Front-end setup
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.15'

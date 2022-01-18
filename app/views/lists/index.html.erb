@@ -12,7 +12,7 @@
   <% @lists.each do |list| %>
     <div class="card" style="width: 18rem;">
     <% if list.photo.attached? %>
-    <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %>
+    <%= image_tag list.photo, height: 300, width: 400, crop: :fill %>
     <% end %>
     <%# image hosting %>
       <img class="card-img-top" src="https://picsum.photos/200/300?random=1" alt="Card image cap">

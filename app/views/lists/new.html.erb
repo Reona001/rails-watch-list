@@ -3,7 +3,7 @@
 <%= simple_form_for [@list] do |f| %>
   <%= f.input :name %>
   <%= f.submit %>
-  <%= f.input :photo, as::file %>
+  <%= f.input :photo, as: :file %>
 <% end %>
 
  <%= link_to 'Nevermind back to top', lists_path %>

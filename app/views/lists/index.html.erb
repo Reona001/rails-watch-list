@@ -11,6 +11,8 @@
 <div class="flex-container">
   <% @lists.each do |list| %>
     <div class="card" style="width: 18rem;">
+    <%# image hosting %>
+    <%= cl_image_tag @article.photo.key,  crop: :thumb %>
       <img class="card-img-top" src="https://picsum.photos/200/300?random=1" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title"><%= list.name %></h5>

@@ -19,7 +19,7 @@
       <div class="card-body">
         <h5 class="card-title"><%= list.name %></h5>
         <h5 class="inside"><%= list.bookmarks.count %> Movie(s)</h5>
-        <%= link_to 'See inside list', list_path(list.id), class: 'btn btn-primary' %>
+        <%= link_to 'See inside list', list_path(list), class: 'btn btn-primary' %>
       </div>
     </div>
   <% end %>

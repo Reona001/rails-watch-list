@@ -56,6 +56,7 @@
 //Indes Page Card with Hover//
 
 .card-container {
+  padding: 46px;
   min-width: 0;
   margin: auto;
   display: flex;
@@ -91,5 +92,13 @@
 
   // style //
   border-radius: 8px;
+}
 
+.card-list:hover  {
+  background-color: khaki;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
 }

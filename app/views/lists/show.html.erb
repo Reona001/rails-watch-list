@@ -7,6 +7,9 @@
     </div>
   </div>
 
+<div class= "destroy-list-link">
+  <%= link_to 'Remove List', new_list_path(@list), method: :delete %>
+</div>
 
 
 <div class="flex-container">
@@ -21,4 +24,5 @@
       </div>
     </div>
   <% end %>
+
 </div>

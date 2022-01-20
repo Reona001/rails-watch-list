@@ -66,8 +66,10 @@
   row-gap: 10px;
   column-gap: 10px;
   justify-content: center;
-  background-color: rgb(131, 16, 207);
-  width: 80vw;
+  background-image: url("brickwall.png");
+  // background-repeat: no-repeat;
+  // background-color: rgb(131, 16, 207);
+  width: 100vw;
   height: 100%;
 }
 
@@ -81,7 +83,7 @@
 
 .card-list {
   // positional //
-  background-color: rgb(206, 136, 7);
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   margin: 10px;
   display: grid;
@@ -91,14 +93,30 @@
   text-align: center;
 
   // style //
+  color: #1f1f1f;
   border-radius: 8px;
+
 }
 
 .card-list:hover  {
-  background-color: khaki;
+  background-color: rgb(180, 180, 180);
 }
 
+// Image Control Value //
 .image-container {
-  display: flex;
-  justify-content: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -20px;
+  margin: -20px;
+
+}
+
+.profile-image {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-stats {
+  margin-top: 36px;
 }

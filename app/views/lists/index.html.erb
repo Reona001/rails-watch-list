@@ -11,205 +11,28 @@
 
 
 
-<div class="flex-container">
-  <% @lists.each do |list| %>
-    <div class="card" style="width: 18rem;">
-    <%# image hosting %>
-     <%# <img class="card-img-top" src="ttp://placekitten.com/200/300" alt="Card image cap"> %>
-    <% if list.photo.attached? %>
-      <img class="card-img-top" <%= image_tag list.photo, height: 300, width: 500, crop: :fill %>
-    <% end %>
-      <div class="card-body">
-        <h5 class="card-title"><%= list.name %></h5>
-        <h5 class="inside"><%= list.bookmarks.count %> Movie(s)</h5>
-        <%= link_to 'See inside list', list_path(list), class: 'btn btn-primary' %>
-      </div>
-    </div>
-  <% end %>
-</div>
 
 <%# card component %>
 <div class ="card-container">
+  <% @lists.each do |list| %>
   <div class="card-list">
     <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
+      <% if list.photo.attached? %>
+        <img class="profile-image" <%= image_tag list.photo, height: 300, width: 460, crop: :fill %>
+      <% else %>
+        <img class="profile-image" src="https://picsum.photos/200/300" alt="Place-holder-images">
+      <% end %>
     </div>
 
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-
-  <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
 
     <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-    <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
+      <h2><%= list.name %></h2>
+      <p><%= list.bookmarks.count %> Movie(s)</p>
     <div class="card-text">
-      <p>Some kind of text here</p>
+      <span class="date">Created: 1/22/2022 </span>
     </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
     </div>
+      <%= link_to 'See inside list', list_path(list), class: 'btn btn-primary' %>
   </div>
-    <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-    <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-    <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-    <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-    <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-    <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-    <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-    <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-    <div class="card-list">
-    <div class="image-container">
-     <img src="http://placekitten.com/200/300" alt="Card image cap">
-    </div>
-
-    <div class="card-text">
-      <p>Some kind of text here</p>
-    </div>
-      <span class="date">6 days ago</span>
-
-    <div class="card-stats">
-      <h2>Post One</h2>
-      <p>Some kind of description</p>
-    </div>
-  </div>
-
+   <% end %>
 </div>

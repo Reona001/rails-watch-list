@@ -1,0 +1,24 @@
+.list-title-container {
+  height: 300px;
+  width: 100vw;
+  background-image: url("black_background.png");
+  background-position: left;
+  position: relative;
+
+  h1 {
+    font-family: 'Roboto', sans-serif;
+  }
+  p {
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+.card-text {
+  color: white;
+  position: absolute;
+  left: 506px;
+  bottom: 97px;
+  .button-array {
+    margin-top: 26px;
+  }
+}

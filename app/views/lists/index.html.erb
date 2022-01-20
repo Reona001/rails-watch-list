@@ -18,7 +18,7 @@
   <div class="card-list">
     <div class="image-container">
       <% if list.photo.attached? %>
-        <img class="profile-image" <%= image_tag list.photo, height: 300, width: 460, crop: :fill %>
+        <%= image_tag list.photo, height: 300, width: 460, crop: :fill, class: "profile-image" %>
       <% else %>
         <img class="profile-image" src="https://picsum.photos/200/300" alt="Place-holder-images">
       <% end %>

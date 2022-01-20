@@ -1,8 +1,14 @@
 
 <%# Form for creating bookmark %>
-<%= simple_form_for [@list, @bookmark] do |f| %>
 
-  <%= f.association :movie, as: :select %>
-  <%= f.input :comment %>
-  <%= f.submit %>
-<% end %>
+<div class="form-container">
+  <h1>Add a movie!</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie, as: :select %>
+    <%= f.input :comment %>
+    <%= f.submit %>
+  <% end %>
+   <div class="never-mind">
+   <%= link_to 'Nevermind back to top', lists_path, class: 'btn btn-secondary' %>
+   </div>
+</div>

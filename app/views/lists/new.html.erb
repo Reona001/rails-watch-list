@@ -1,9 +1,12 @@
 <%# Form for creating list %>
 
+<div class="form-container">
+<h1>Create a new list</h1>
 <%= simple_form_for [@list] do |f| %>
   <%= f.input :name %>
   <%= f.submit %>
   <%= f.input :photo, as: :file %>
 <% end %>
-
- <%= link_to 'Nevermind back to top', lists_path %>
+ <div class="never-mind">
+ <%= link_to 'Nevermind back to top', lists_path, class: 'btn btn-secondary'%>
+</div>
